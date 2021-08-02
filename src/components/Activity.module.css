@@ -1,4 +1,4 @@
-  .item {
+.item {
     margin: 1rem 0;
   }
   
@@ -30,7 +30,7 @@
     text-align: center;
   }
   
-  #actions button {
+  .actions button {
     font: inherit;
     cursor: pointer;
     color: #77002e;

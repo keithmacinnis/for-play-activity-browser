@@ -13,8 +13,8 @@ function Activity(props) {
                     <address>{props.activity.address}</address>
                     <p>{props.activity.description}</p>
                 </div>
-                <div>
-                    <button className={css.actions}>Join Activity</button>
+                <div className={css.actions}>
+                    <button >Join Activity</button>
                 </div>
             </Card>
         </li>

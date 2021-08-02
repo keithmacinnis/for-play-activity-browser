@@ -4,7 +4,7 @@ import css from './NavBar.module.css';
 function NavBar() {
 return (
     <header className={css.header}>
-        <div className={css.logo}>For Play: The Neighbourhood Connector</div>
+        <div className={css.logo}>For Play, The Neighbourhood Connector</div>
         <nav>
             <ul>
                 <li>
