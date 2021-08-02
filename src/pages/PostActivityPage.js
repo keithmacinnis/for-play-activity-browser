@@ -6,17 +6,16 @@ function PostActivityPage() {
     const history = useHistory();
     
     function postActivityHandler(data) {
-        console.log("in postActivityHandler")
         fetch("https://react-for-play-test-default-rtdb.firebaseio.com/activities.json",
         {
             method: "POST",
             body:   JSON.stringify(data),
             headers: {
-                "Content-Type": "application/json"
+                    "Content-Type": "application/json"
             }
         }
         ).then (() => {
-            history.replace("/");
+            history.push("/");
         });
     }
 
