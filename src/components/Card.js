@@ -1,4 +1,3 @@
-import { classes } from "istanbul-lib-coverage";
 import css from "./Card.module.css";
 
 function Card(props) {

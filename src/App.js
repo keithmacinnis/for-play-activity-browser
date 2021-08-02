@@ -3,7 +3,6 @@ import ActivitiesPage from './pages/ActivitiesPage';
 import FavoritesPage from './pages/FavoritesPage';
 import PostActivityPage from './pages/PostActivityPage';
 import NotFoundPage from './pages/NotFoundPage';
-import NavBar from './components/NavBar';
 import Layout from './components/Layout';
 
 function App() {
