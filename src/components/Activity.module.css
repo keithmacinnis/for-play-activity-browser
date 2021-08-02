@@ -26,11 +26,11 @@
   }
   
   .actions {
-    padding: 1.5rem;
+    padding: 3.0rem;
     text-align: center;
   }
   
-  .actions button {
+  /* .actions button {
     font: inherit;
     cursor: pointer;
     color: #77002e;
@@ -38,9 +38,31 @@
     background-color: transparent;
     padding: 0.5rem 1.5rem;
     border-radius: 4px;
-  }
+  } */
   
   .actions button:hover,
   .actions button:active {
     background-color: #ffe2ed;
   }
+
+
+  .btngrad {background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%)}
+  .btngrad {
+     margin: 10px;
+     padding: 15px 45px;
+     text-align: center;
+     text-transform: uppercase;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: white;            
+     box-shadow: 0 0 20px #eee;
+     border-radius: 21px;
+     display: block;
+   }
+
+   .btngrad:hover {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
+  

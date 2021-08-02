@@ -35,7 +35,7 @@ function NewActivityForm(props) {
                 <input type="text" required id="title" ref={titleInputRef} />
             </div>
             <div className={css.control}>
-                <label htmlFor="image">Meetup Image</label>
+                <label htmlFor="image">Image url</label>
                 <input type="url" required id="image"  ref={imageInputRef}/>
             </div>
             <div className={css.control}>

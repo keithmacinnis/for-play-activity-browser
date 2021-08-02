@@ -1,5 +1,6 @@
 import ActivityList from "../components/ActivityList"
 import { useState, useEffect } from "react";
+import Card from "../components/Card";
 
 const Dummy_Data = [
     {
@@ -36,12 +37,13 @@ function ActivitiesPage() {
     },
     []
     )
-    
-    
     if (isLoading) {
         return (
-            <section>
-                <h3>Loading...</h3>
+            <section >
+            <Card>
+
+                <h2>Loading...</h2>
+            </Card>
             </section>
         )
     }
