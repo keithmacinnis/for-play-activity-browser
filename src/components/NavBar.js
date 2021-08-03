@@ -1,8 +1,11 @@
 import { Link } from 'react-router-dom';
 import css from './NavBar.module.css';
+import { useContext} from 'react';
+import FavoritesContext from '../store/favorites-context';
 
 function NavBar() {
-return (
+const favContext = useContext(FavoritesContext);
+    return (
     <header className={css.header}>
         <div className={css.logo}>For Play, The Neighbourhood Connector</div>
         <nav>
@@ -11,7 +14,8 @@ return (
                     <Link to="/">Activities</Link>
                 </li>
                 <li>
-                    <Link to="/favorites">Favorites</Link>
+                    <Link to="/favorites">Joined</Link>
+                    <span className={css.badge}>{favContext.totalFavorites}</span>
                 </li>
                 <li>
                     <Link to="/post">Post Activity</Link>

@@ -26,6 +26,26 @@
     -->
     <title>React App</title>
   </head>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBepWJ0sybt1FT5Q8qLJl-H16F_J4xLFuk",
+    authDomain: "react-for-play-test.firebaseapp.com",
+    projectId: "react-for-play-test",
+    storageBucket: "react-for-play-test.appspot.com",
+    messagingSenderId: "1014877846469",
+    appId: "1:1014877846469:web:6f772f3fe9c408bd6169ac"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>

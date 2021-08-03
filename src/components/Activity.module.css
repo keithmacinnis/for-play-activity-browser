@@ -57,7 +57,7 @@
      color: white;            
      box-shadow: 0 0 20px #eee;
      border-radius: 21px;
-     display: block;
+     display: inline;
    }
 
    .btngrad:hover {
