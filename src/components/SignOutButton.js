@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import getFirebase from "../firebase";
+import css from "./Activity.module.css";
+
 
 const SignOutButton = () => {
   const firebaseInstance = getFirebase();
@@ -17,37 +19,33 @@ const SignOutButton = () => {
   };
 
   return (
-    <div>
-      <Button onClick={() => signOut()}>Sign out</Button>
+    <div  className={css.content}>
+      <Button onClick={() => signOut()}>Signout</Button>
     </div>
   );
 };
 
 export default SignOutButton;
 
-const Title = styled.h1`
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+const Button = styled.button`
+background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+margin: 10px;
+padding: 8px 40px;
+text-align: center;
+text-transform: uppercase;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
-  line-height: 48px;
-  color: #000;
-  text-align: center;
-`;
-
-const Button = styled.button`
-  background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%);
-  padding: 12px 0;
-  width: 200px;
-  border: none;
-  border-radius: 30px;
-  color: #fff;
-  font-weight: bold;
-  font-family: Segoe UI, sans-serif;
-  cursor: pointer;
-
-  :focus {
-    outline: none;
-  }
+transition: 0.5s;
+background-size: 200% auto;
+box-shadow: 0 0 20px #eee;
+border-radius: 21px;
+display: inline;
+:hover, :active {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+     background-color: #ffe2ed;
+}
 `;
