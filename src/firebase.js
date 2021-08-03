@@ -11,7 +11,7 @@ const firebaseConfig = ({
 });
 
 let instance;
-
+console.log(firebaseConfig);
 export default function getFirebase() {
     if (typeof window !== "underfined") {
         if (instance) return instance;
