@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import css from './NavBar.module.css';
 import { useContext} from 'react';
 import FavoritesContext from '../store/favorites-context';
+import SignOutButton from './SignOutButton';
 
 function NavBar() {
 const favContext = useContext(FavoritesContext);
@@ -20,10 +21,13 @@ const favContext = useContext(FavoritesContext);
                 <li>
                     <Link to="/post">Post Activity</Link>
                 </li>
+                <li>
+                    <SignOutButton />
+                </li>
             </ul>
         </nav>
     </header>
 );
 }
 
-export default NavBar
+export default NavBar;

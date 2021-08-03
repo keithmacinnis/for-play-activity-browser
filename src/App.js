@@ -4,10 +4,37 @@ import FavoritesPage from './pages/FavoritesPage';
 import PostActivityPage from './pages/PostActivityPage';
 import NotFoundPage from './pages/NotFoundPage';
 import Layout from './components/Layout';
+import { useEffect, useState } from 'react';
+import getFirebase from '../src/firebase';
+import SignInForm from './components/SignInForm';
+import SignUpForm from './components/SignUpForm';
 
 function App() {
-  return (
-    <Layout>
+  const [currentUser, setCurrentUser] = useState(null); // Local signed-in state.
+  // Listen to the Firebase Auth state and set the local state.
+    useEffect(() => {
+     const firebase = getFirebase();
+     if (firebase) {
+      firebase.auth().onAuthStateChanged((authUser) => {
+        if (authUser) {
+          setCurrentUser(authUser.email);
+        } else {
+          setCurrentUser(null);
+        }
+      });
+    }
+  }, []);
+
+  if (currentUser === null) {
+    return (
+      <div>
+        <SignInForm />
+        <SignUpForm />
+      </div>
+    );
+  }
+  return ( 
+  <Layout>
     <Switch>
       <Route path="/" exact>
         <ActivitiesPage />
