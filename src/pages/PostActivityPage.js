@@ -21,10 +21,10 @@ function PostActivityPage() {
 
     if (isUploading) {
         return (
-            <section >
-            <Card>
-                <h2>...Uploading...</h2> 
-            </Card>
+            <section>
+                <Card>
+                    <h2>...Uploading...</h2> 
+                </Card>
             </section>
         );
     }
@@ -34,18 +34,3 @@ function PostActivityPage() {
     </section>
 }
 export default PostActivityPage;
-
-//anonymous post w/ fetch : 
-// function postActivityHandler(data) {
-//     fetch("https://react-for-play-test-default-rtdb.firebaseio.com/activities.json",
-//     {
-//         method: "POST",
-//         body:   JSON.stringify(data),
-//         headers: {
-//                 "Content-Type": "application/json"
-//         }
-//     }
-//     ).then (() => {
-//         history.push("/");
-//     });
-// }

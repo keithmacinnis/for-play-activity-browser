@@ -44,20 +44,3 @@ function ActivitiesPage() {
     </section>
 }
 export default ActivitiesPage;
-
-//Anomonous Fetch:
-        // fetch("https://react-for-play-test-default-rtdb.firebaseio.com/activities.json",
-        // ).then ((response) => {
-        //     return response.json(); 
-        // }).then(data => {
-        //     const activities = [];
-        //     for (const key in data) {
-        //         const activity = {
-        //             id: key,
-        //             ...data[key]
-        //         };
-        //         activities.push(activity);
-        //     }
-        //     setActivities(activities);
-        //     setIsLoading(false);
-        // });

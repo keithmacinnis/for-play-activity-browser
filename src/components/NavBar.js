@@ -3,7 +3,7 @@ import css from './NavBar.module.css';
 import { useContext} from 'react';
 import FavoritesContext from '../store/favorites-context';
 import SignOutButton from './SignOutButton';
-
+import NavBarButton from './NavBarbutton';
 function NavBar() {
 const favContext = useContext(FavoritesContext);
     return (
@@ -12,14 +12,13 @@ const favContext = useContext(FavoritesContext);
         <nav>
             <ul>
                 <li>
-                    <Link to="/">Activities</Link>
+                    <NavBarButton url ="/" title="Activities" />
                 </li>
                 <li>
-                    <Link to="/favorites">Joined</Link>
-                    <span className={css.badge}>{favContext.totalFavorites}</span>
+                    <NavBarButton url ="/favorites" title="Fav'd" badgeNumber={favContext.totalFavorites}/>
                 </li>
                 <li>
-                    <Link to="/post">Post Activity</Link>
+                    <NavBarButton url="/post" title="Post" />
                 </li>
                 <li>
                     <SignOutButton />
