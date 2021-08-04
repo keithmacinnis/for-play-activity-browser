@@ -35,8 +35,7 @@ function Activity(props) {
                     <p>{props.activity.description}</p>
                 </div>
                 <div className={css.content}>
-                    <button className={css.btngrad} onClick={addActivityHandler}>{itemIsFav ? "Leave Activity " : "Join Activity"}</button>
-                </div>
+                    <button className={css.btngrad} onClick={addActivityHandler}>{itemIsFav ? "Leave Activity " : "Join Activity"}</button>                </div>
             </Card>
         </li>
     );
