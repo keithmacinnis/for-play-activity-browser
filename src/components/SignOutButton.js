@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import getFirebase from "../firebase";
-import css from "./Activity.module.css";
 
 
 const SignOutButton = () => {
@@ -19,7 +18,7 @@ const SignOutButton = () => {
   };
 
   return (
-    <div  className={css.content}>
+    <div >
       <Button onClick={() => signOut()}>Signout</Button>
     </div>
   );
@@ -32,18 +31,19 @@ background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  1
 margin: 10px;
 padding: 8px 40px;
 text-align: center;
+color:lightgrey;
 text-transform: uppercase;
 font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-style: normal;
   font-weight: bold;
-transition: 0.5s;
+transition: 0.2s;
 background-size: 200% auto;
-box-shadow: 0 0 20px #eee;
-border-radius: 21px;
+box-shadow: 0 0 2px #eee;
+border-radius: 10px;
 display: inline;
 :hover, :active {
-     background-position: right center; /* change the direction of the change here */
+     background-position: bottom center; /* change the direction of the change here */
      color: #fff;
      text-decoration: none;
      background-color: #ffe2ed;

@@ -49,7 +49,7 @@ function App() {
         <NotFoundPage />
       </Route>
     </Switch>  
-    </Layout>
+  </Layout>
   );
 }
 

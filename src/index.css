@@ -22,7 +22,7 @@ h1, h2 {
   cursor: pointer;
   border-radius: 4px;
   background-color: #800040;
-  color: white;
+  color: rgb(158, 38, 38);
   border: 1px solid #800040;
   margin: 0 1rem;
 }

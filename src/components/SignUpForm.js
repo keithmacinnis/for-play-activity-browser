@@ -28,7 +28,7 @@ const SignUpForm = () => {
 
   return (
     <FormWrapper onSubmit={signUp}>
-      <Title>Sign up</Title>
+      <Title>No Account? Join below!</Title>
       <Input placeholder="Email" {...email} />
       <Input placeholder="Password" type="password" {...password} />
       <Button type="submit">Sign up</Button>
@@ -72,16 +72,16 @@ const Input = styled.input`
 `;
 
 const Button = styled.button`
-  background: linear-gradient(91.4deg, #2fb8ff 0%, #9eecd9 100%);
+  background: linear-gradient(91.4deg, #ffb8ff 0%, #9eecd9 100%);
   padding: 12px 0;
   width: 200px;
   border: none;
   border-radius: 30px;
-  color: white;
+  color: darkblue;
   font-weight: bold;
   font-family: Segoe UI, sans-serif;
   cursor: pointer;
-
+ 
   :focus {
     outline: none;
   }
