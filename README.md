@@ -1,6 +1,7 @@
 ## For Play - The Neigbourhood Connector (ReactJS Version)
 
 The app is live at: https://for-play-activity-browser.herokuapp.com/
+
 This app is meant to duplicate an app I wrote in Swift, https://github.com/keithmacinnis/for-play
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
