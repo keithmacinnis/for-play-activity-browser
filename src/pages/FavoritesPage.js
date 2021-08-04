@@ -9,7 +9,6 @@ function FavoritesPage() {
         content = <p>Nothing Joined...</p>
     } else {
         content = <ActivityList data= {favoritesContext.favorites} />
-
     }
 
     return <section>
