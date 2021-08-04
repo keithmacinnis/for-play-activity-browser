@@ -11,12 +11,22 @@ const firebaseConfig = ({
 });
 
 let instance;
+let database;
 
 export default function getFirebase() {
     if (typeof window !== "undefined") {
         if (instance) return instance;
         instance = firebase.initializeApp(firebaseConfig);
         return instance;
+    }
+    return null;
+}
+
+export function getDatabase() {
+    if (typeof window !== "undefined") {
+        if (database) return database;
+        database = firebase.database();
+        return database;
     }
     return null;
 }
