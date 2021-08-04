@@ -24,7 +24,7 @@ function NewActivityForm(props) {
             description: eneteredDesc,
             image: enteredImageURL,
         };
-        console.log(activityData);
+        console.log("Going to Post:",activityData);
         props.onPostActivity(activityData);
     }
     return (

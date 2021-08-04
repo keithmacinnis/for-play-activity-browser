@@ -3,26 +3,23 @@ import styled from "styled-components";
 import getFirebase from "../firebase";
 import useInput from "../useInput";
 
-const SignInForm = () => {
+function SignInForm() {
   const firebaseInstance = getFirebase();
   const email = useInput("");
   const password = useInput("");
 
-  const signIn = async (event) => {
+  async function signIn(event) {
     event.preventDefault();
-
     try {
       if (firebaseInstance) {
-        const user = await firebaseInstance
-          .auth()
-          .signInWithEmailAndPassword(email.value, password.value);
+        const user = await firebaseInstance.auth().signInWithEmailAndPassword(email.value, password.value);
         console.log("user", user);
         alert("Welcome back!");
       }
     } catch (error) {
       console.log("error", error);
     }
-  };
+  }
 
   return (
     <FormWrapper onSubmit={signIn}>

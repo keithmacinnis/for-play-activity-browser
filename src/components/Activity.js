@@ -6,7 +6,6 @@ import { useContext } from 'react';
 
 function Activity(props) {  
     const favoritesContext = useContext(FavoritesContext);
-
     const itemIsFav = favoritesContext.isFav(props.activity.id);
 
     function addActivityHandler() {
