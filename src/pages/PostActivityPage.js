@@ -1,33 +1,32 @@
 import { useHistory } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import NewActivityForm from "../components/NewActivityForm";
 import Card from "../components/Card";
 import { getDatabase } from "../firebase";
-import { set } from 'firebase/database';
 
 function PostActivityPage() {
     const history = useHistory();
-    const [isLoading, setIsLoading] = useState(false);
+    const [isUploading, setIsUploading] = useState(false);
 
     function postActivityHandler(data) {
-        setIsLoading(true);
+        setIsUploading(true);
         const db = getDatabase();
         const ref = db.ref("activities");
         const newPostRefAndUID = ref.push();
         newPostRefAndUID.set(data).then(() => {
-            setIsLoading(false);
+            setIsUploading(false);
             history.push("/");
         });
     }
 
-    if (isLoading) {
+    if (isUploading) {
         return (
             <section >
             <Card>
-                <h2>Uploading...</h2>
+                <h2>...Uploading...</h2> 
             </Card>
             </section>
-        )
+        );
     }
     return <section>
         <h1>Add New Activity</h1>
